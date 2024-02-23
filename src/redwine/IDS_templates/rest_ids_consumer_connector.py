@@ -18,7 +18,7 @@ class RestIDSConsumerConnector:
                         "Content-Type": "application/json",
                          "Authorization": "Basic aWRzVXNlcjpwYXNzd29yZA=="
             }
-            ret = requests.post(url, data=msg, headers=headers, verify= False, timeout=10)
+            ret = requests.post(url, data=msg, headers=headers, verify= False, timeout=45)
             logger.debug("POST returned {}".format(ret))
             return ret
         except requests.RequestException as e:
@@ -45,7 +45,7 @@ class RestIDSConsumerConnector:
     def is_artifact_internal_registered_by_resource_title(self, resource_title,trainning_provider_ip):
         
         #Get execution core description
-        response = self.get('https://'+trainning_provider_ip+':8091',10)
+        response = self.get('https://'+trainning_provider_ip+':8091',45)
         if response is None or response.status_code != 200 :
             return None
         resourceId = self.get_resourceid_from_post_response_by_title(response,resource_title)
