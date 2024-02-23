@@ -80,7 +80,7 @@ def redwine_dag_shape_test():
         import uuid
         import pickle
 
-        sys.path.insert(1, '/git/ai-toolkit-dags/src/redwine')
+        sys.path.insert(1, '/git/dag-test/src/redwine')
         from Data.read_data import read_data
         from Process.data_processing import data_processing
 
@@ -115,7 +115,7 @@ def redwine_dag_shape_test():
         import redis
         import pickle
 
-        sys.path.insert(1, '/git/ai-toolkit-dags/src/redwine')
+        sys.path.insert(1, '/git/dag-test/src/redwine')
         from Models.ElasticNet_model_training import elasticNet_model_training
 
         redis_client = redis.StrictRedis(
