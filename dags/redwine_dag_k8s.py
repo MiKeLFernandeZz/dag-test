@@ -128,7 +128,7 @@ def redwine_dag_shape_test():
 
         data = redis_client.get('data-' + read_id)
         res = pickle.loads(data)
-        res_df = pd.DataFrame.from_dict(res)
+        res_df = pd.DataFrame([res])
         print(res_df.shape)
 
     # Instantiate each task and define task dependencies
