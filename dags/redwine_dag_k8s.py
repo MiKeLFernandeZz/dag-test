@@ -80,6 +80,7 @@ def redwine_dag_shape_test():
         import uuid
         import pickle
 
+
         sys.path.insert(1, '/git/dag-test/src/redwine')
         from Data.read_data import read_data
         from Process.data_processing import data_processing
@@ -114,6 +115,7 @@ def redwine_dag_shape_test():
         import sys
         import redis
         import pickle
+        import pandas as pd
 
         sys.path.insert(1, '/git/dag-test/src/redwine')
         from Models.ElasticNet_model_training import elasticNet_model_training
@@ -126,7 +128,8 @@ def redwine_dag_shape_test():
 
         data = redis_client.get('data-' + read_id)
         res = pickle.loads(data)
-        print(res.shape)
+        res_df = pd.DataFrame.from_dict(res)
+        print(res_df.shape)
 
     # Instantiate each task and define task dependencies
     processing_result = read_data_procces_task()
