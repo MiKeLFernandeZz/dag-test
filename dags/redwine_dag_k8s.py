@@ -130,7 +130,7 @@ def redwine_dag_shape_test():
 
     # Instantiate each task and define task dependencies
     processing_result = read_data_procces_task()
-    shape_result = print_shape_task()
+    shape_result = print_shape_task(processing_result)
 
 
     # Define the order of the pipeline
