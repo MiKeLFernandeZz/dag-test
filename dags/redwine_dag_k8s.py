@@ -128,6 +128,7 @@ def redwine_dag_shape_test():
 
         data = redis_client.get('data-' + read_id)
         res = pickle.loads(data)
+        print('res', res)
         res_df = pd.DataFrame([res])
         print(res_df.shape)
 
