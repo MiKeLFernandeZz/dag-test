@@ -29,7 +29,7 @@ def read_data() -> pd.DataFrame:
     # )
     
     # df = pd.read_csv(data, delimiter=';', quotechar='"')
-    df = pd.read_csv("src/redwine/wine_data_50mb.csv", sep = ';')
+    df = pd.read_csv("./wine_data_50mb.csv", sep = ';')
     print(df)
     
     return df
