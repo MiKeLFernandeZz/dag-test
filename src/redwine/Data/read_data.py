@@ -19,15 +19,17 @@ def read_data() -> pd.DataFrame:
         A Pandas DataFrame representing the content of the specified file.
     """
 
-    ids_consumer = RestIDSConsumerConnector()
-    data = ids_consumer.get_external_artifact_by_resource_title(
-        config.MLFLOW_EXPERIMENT, 
-        config.TRUE_CONNECTOR_EDGE_IP, 
-        config.TRUE_CONNECTOR_EDGE_PORT, 
-        config.TRUE_CONNECTOR_CLOUD_IP, 
-        config.TRUE_CONNECTOR_CLOUD_PORT
-    )
+    # ids_consumer = RestIDSConsumerConnector()
+    # data = ids_consumer.get_external_artifact_by_resource_title(
+    #     config.MLFLOW_EXPERIMENT, 
+    #     config.TRUE_CONNECTOR_EDGE_IP, 
+    #     config.TRUE_CONNECTOR_EDGE_PORT, 
+    #     config.TRUE_CONNECTOR_CLOUD_IP, 
+    #     config.TRUE_CONNECTOR_CLOUD_PORT
+    # )
     
-    df = pd.read_csv(data, delimiter=';', quotechar='"')
+    # df = pd.read_csv(data, delimiter=';', quotechar='"')
+    df = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv", sep = ';')
+    print(df)
     
     return df
