@@ -17,7 +17,7 @@ def read_data() -> pd.DataFrame:
 
     Return:
         A Pandas DataFrame representing the content of the specified file.
-    """
+    """ 
 
     # ids_consumer = RestIDSConsumerConnector()
     # data = ids_consumer.get_external_artifact_by_resource_title(
