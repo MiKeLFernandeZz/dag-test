@@ -7,7 +7,7 @@ scripts and included in the Data directory.
 
 import pandas as pd
 # from IDS_templates.rest_ids_consumer_connector import RestIDSConsumerConnector
-import config
+# import config
 
 def read_data() -> pd.DataFrame:
     """
