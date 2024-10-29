@@ -42,7 +42,7 @@ def redwine_dag_shape_test():
         "TRUE_CONNECTOR_CLOUD_PORT": Variable.get("IDS_PROXY_PORT"),
         "MLFLOW_ENDPOINT": Variable.get("MLFLOW_ENDPOINT"),
         "MLFLOW_TRACKING_USERNAME": Variable.get("MLFLOW_TRACKING_USERNAME"),
-        "MLFLOW_TRACKING_PASSWORD": Variable.get("MLFLOW_TRACKING_PASSWORD")
+        "MLFLOW_TRACKING_PASSWORD": Variable.get("MLFLOW_TRACKING_PASSWORD") 
     }
 
     volume_mount = k8s.V1VolumeMount(
