@@ -26,7 +26,7 @@ from airflow.models import Variable
     schedule_interval='* 12 * * *', 
     start_date=datetime.now(),
     catchup=False,
-    tags=['demo', 'redWine'],
+    tags=['demo', 'redWine'], 
 ) 
 def redwine_dag_shape_test():
 
